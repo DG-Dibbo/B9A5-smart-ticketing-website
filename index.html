@@ -10,17 +10,116 @@
             type="text/css" />
         <script
             src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+        <!-- font awesome -->
+        <script src="https://kit.fontawesome.com/11534c10fb.js"
+            crossorigin="anonymous"></script>
     </head>
-    <body class="raleway-font">
+    <body class="raleway-font" id="boss-body">
         <header>
 
             <!-- Navbar section -->
-            <nav>
-                
-                
+            <nav class="container mx-auto lg:px-40 md:px-20 px-8 mt-5">
+
+                <div class="navbar">
+                    <div class="navbar-start">
+                        <div class="dropdown">
+                            <div tabindex="0" role="button"
+                                class="btn btn-ghost lg:hidden">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    class="h-5 w-5" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2"
+                                        d="M4 6h16M4 12h8m-8 6h16" /> </svg>
+                            </div>
+                            <ul
+                                tabindex="-1"
+                                class="menu menu-sm dropdown-content bg-slate-950 rounded-box z-1 mt-3 w-52 p-2 shadow text-white">
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Destination</a></li>
+                                <li><a href="#">Search</a></li>
+                            </ul>
+                        </div>
+                        <a
+                            class="btn btn-ghost text-3xl font-extrabold">S-Ticket</a>
+                    </div>
+                    <div class="navbar-center hidden lg:flex">
+                        <ul class="menu menu-horizontal px-1">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Destination</a></li>
+                            <li><a href="#">Search</a></li>
+
+                        </ul>
+                    </div>
+                    <div class="navbar-end">
+                        <a
+                            class="btn bg-[#1DD1001A] px-6 border-[#1DD10066] rounded-lg"><h4
+                                class="font-bold text-green-500">Bus</h4> <img
+                                src="images/bus-icon.png" alt></a>
+                    </div>
+                </div>
 
             </nav>
+            <!-- navbar end section -->
 
+            <section
+                class="banner-section container mx-auto lg:px-40 md:px-20 px-8 mt-5 ">
+                <!-- Banner container full part -->
+                <div
+                    class="relative w-full lg:h-[500px] h-[300px] bg-[url(images/banner.PNG)]  bg-cover bg-center rounded-lg">
+
+                    <!-- Banner content inside start-->
+                    <div
+                        class="flex flex-col justify-center items-center text-white gap-4 px-8 lg:py-36 md:py-6 py-6">
+
+                        <h3
+                            class="lg:font-extrabold font-medium lg:text-5xl md:text-2xl">End-to-End Travel with Sonali Express</h3>
+
+                        <h3
+                            class="text-[#1DD100] font-extrabold lg:text-5xl md:text-4xl text-3xl">SONALI
+                            EXPRESS</h3>
+
+                        <p
+                            class="lg:line-clamp-3 md:line-clamp-2 line-clamp-2 text-center text-slate-300">Yes,
+                            you can run unit tests and view the results directly
+                            within the app. The integrated testing features
+                            allow for a streamlined .</p>
+                        <button
+                            class="btn bg-[#1DD100] px-6 py-6 border-[#1DD10066] rounded-sm
+                        text-white ">Buy Tickets</button>
+
+                    </div>
+                    <!-- Banner content inside end-->
+
+                    <div class="absolute lg:top-106 lg:left-60 lg:space-x-10 md:space-x-2 hidden md:flex lg:flex md:px-10">
+                        <div class="stats bg-white px-4 py-3 shadow-sm">
+                            
+                            <img class="p-2" src="images/people.png" alt>
+                            <div class="stat-value lg:text-3xl">500K+</div>
+                            <div class="stat-desc">Registered users</div>
+
+                        </div>
+                        <div class="stats bg-white px-4 py-3 shadow-sm">
+                            
+                            <img class="p-2" src="images/ticket-cupon.png" alt>
+                            <div class="stat-value lg:text-3xl md:text-3xl">1.2 lacks</div>
+                            <div class="stat-desc">Tickets sold</div>
+
+                        </div>
+                        <div class="stats bg-white px-4 py-3 shadow-sm">
+                            
+                            <img class="p-2" src="images/stoppage.png" alt>
+                            <div class="stat-value lg:text-3xl md:text-3xl">80K+</div>
+                            <div class="stat-desc">Rental partners</div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- Banner container full part end here -->
+            </section>
         </header>
 
         <main>
