@@ -15,7 +15,7 @@
         <script src="https://kit.fontawesome.com/11534c10fb.js"
             crossorigin="anonymous"></script>
     </head>
-    <body class="raleway-font" id="boss-body">
+    <body class="raleway-font bg-emerald-100" id="boss-body">
         <header>
 
             <!-- Navbar section -->
@@ -64,7 +64,7 @@
 
             </nav>
             <!-- navbar end section -->
-
+            <!-- Banner section -->
             <section
                 class="banner-section container mx-auto lg:px-40 md:px-20 px-8 mt-5 ">
                 <!-- Banner container full part -->
@@ -88,7 +88,7 @@
                             you can run unit tests and view the results directly
                             within the app. The integrated testing features
                             allow for a streamlined .</p>
-                        <button
+                        <button onclick="buyTickets()"
                             class="btn bg-[#1DD100] px-6 py-6 border-[#1DD10066] rounded-sm
                         text-white ">Buy Tickets</button>
 
@@ -133,44 +133,539 @@
                 class="offer-section mt-40 container mx-auto lg:px-40 md:px-20 px-8">
                 <h3 class="text-3xl text-center font-bold">Best offer for
                     you</h3>
-                <div class="flex lg:flex-row md:flex-row flex-col justify-center gap-2 mt-8 mb-10">
 
-                    <div>
-                        <div
-                            class="stats shadow bg-[#FFBF0F] border-2 border-white flex lg:flex-row md-flex-row flex-col">
-                            <div class="stat">
-                                <div class="stat-value">15% OFF</div>
-                                <div class="stat-title">on your next
-                                    purchase</div>
-                                <div class="stat-desc">use by january 2025</div>
-                            </div>
-                            <div class="p-6 lg:border-l-2 md:border-l-2 lg:border-t-0 md:border-t-0 border-t-2 border-dashed lg:border-r-neutral-500 md:border-r-neutral-500 border-t-neutral-500">
-                                <div class="stat-value"><span>NEW24</span></div>
-                                <div class="stat-title">coupon code</div>
-                            </div>
+                <div
+                    class="flex lg:flex-row md:flex-row flex-col justify-center gap-2 mt-8 mb-10">
+                    <!-- only person coupon part -->
+                    <div
+                        class="stats shadow bg-[#FFBF0F] border-2 border-white flex lg:flex-row md-flex-row flex-col">
+                        <div class="stat">
+                            <div class="stat-value">15% OFF</div>
+                            <div class="stat-title">on your next
+                                purchase</div>
+                            <div class="stat-desc">use by january 2025</div>
                         </div>
-
-                    </div>
-
-                    <div>
                         <div
-                            class="stats shadow bg-[#e870d6] border-2 border-white flex lg:flex-row md:flex-row flex-col">
-                            <div class="stat ">
-                                <div class="stat-value">20% OFF</div>
-                                <div class="stat-title">on your next
-                                    purchase</div>
-                                <div class="stat-desc">use by january 2025</div>
-                            </div>
-                            <div class="p-6 lg:border-l-2 md:border-l-2 lg:border-t-0 md:border-t-0 border-t-2 border-dashed lg:border-r-neutral-500 md:border-r-neutral-500 border-t-neutral-500">
-                                <div class="stat-value"><span>Couple20</span></div>
-                                <div class="stat-title">coupon code</div>
-                                <!-- <div class="stat-desc">use by january 2025</div> -->
-                            </div>
+                            class="p-6 lg:border-l-2 md:border-l-2 lg:border-t-0 md:border-t-0 border-t-2 border-dashed lg:border-r-neutral-500 md:border-r-neutral-500 border-t-neutral-500">
+                            <div
+                                class="stat-value text-rose-900"><span id="new24">NEW24</span></div>
+                            <div class="stat-title">coupon code</div>
                         </div>
                     </div>
+                    <!-- couple coupon part -->
+                    <div
+                        class="stats shadow bg-[#e870d6] border-2 border-white flex lg:flex-row md:flex-row flex-col">
+                        <div class="stat ">
+                            <div class="stat-value">20% OFF</div>
+                            <div class="stat-title">on your next
+                                purchase</div>
+                            <div class="stat-desc">use by january 2025</div>
+                        </div>
+
+                        <div
+                            class="p-6 lg:border-l-2 md:border-l-2 lg:border-t-0 md:border-t-0 border-t-2 border-dashed lg:border-r-neutral-500 md:border-r-neutral-500 border-t-neutral-500">
+                            <div
+                                class="stat-value text-rose-900"><span id="couple20">Couple20</span></div>
+                            <div class="stat-title">coupon code</div>
+                            <!-- <div class="stat-desc">use by january 2025</div> -->
+                        </div>
+                    </div>
+
                 </div>
             </section>
+            <!-- end offer section -->
 
+            <!-- click event section buy tickets -->
+            <section id="ticket-booking" class="hidden container mx-auto lg:px-40 md:px-20 px-8">
+
+                <!-- sonali express poribahan schedule part-->
+                <section>
+                    <!-- title part -->
+                    <div class="text-center space-y-3">
+                        <h3 class="text-3xl font-bold">Sonali Express</h3>
+                        <p class="text-sm font-normal">
+                            Yes, you can run unit tests and view the results
+                            directly within the app. The integrated testing
+                            features allow for a streamlined .
+                        </p>
+                    </div>
+                    <!-- end -->
+
+                    <div
+                        class="grid lg:grid-cols-12 grid-cols-1 lg:gap-24 gap-10 mt-32 bg-slate-50 p-4 rounded-md">
+
+                        <div class="lg:col-span-10">
+                            <!-- greenline paribahan part -->
+                            <div>
+                                <div
+                                    class="flex flex-col lg:flex-row gap-4 lg:gap-0 
+                                        justify-between items-start lg:items-center 
+                                        w-full">
+
+                                    <!-- Left: Logo + Info -->
+                                    <div class="flex gap-3 items-center">
+                                        <img src="images/bus-logo.png" alt
+                                            class="w-12 h-12">
+                                        <div>
+                                            <h3
+                                                class="text-lg lg:text-2xl font-bold">
+                                                Sonali Express
+                                            </h3>
+                                            <p class="text-sm">
+                                                Coach-009-WEB | NON-AC Business
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Right: Seats Left -->
+                                    <div>
+                                        <button
+                                            class="btn bg-[#1DD1001A] px-4 
+                                                border-[#1DD10066] 
+                                                rounded-lg text-green-600 
+                                                w-full lg:w-auto">
+                                            <span id="available-seat">40</span> Seats Left
+                                        </button>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <!-- end -->
+
+                            <!-- time schedule and places part -->
+                            <div
+                                class="space-y-6 flex flex-col mt-10 bg-slate-200 px-4 py-4 rounded-md w-full">
+
+                                <!-- Route -->
+                                <div
+                                    class="flex flex-col lg:flex-row lg:justify-between lg:items-center gap-2">
+                                    <h4 class="text-sm text-gray-600">Route</h4>
+                                    <h2 class="font-bold">Dhaka - Sylhet</h2>
+                                </div>
+
+                                <!-- Time -->
+                                <div
+                                    class="flex flex-col lg:flex-row lg:justify-between lg:items-center gap-2">
+                                    <h4 class="text-sm text-gray-600">Departure
+                                        Time</h4>
+                                    <h2 class="font-bold">9:00 PM</h2>
+                                </div>
+
+                                <!-- Buttons -->
+                                <div
+                                    class="flex flex-col lg:flex-row gap-3 lg:justify-between items-stretch">
+
+                                    <button
+                                        class="btn btn-active bg-slate-400 text-white w-full lg:w-auto">
+                                        Boarding Point - Laxmipur
+                                    </button>
+
+                                    <button
+                                        class="btn bg-slate-400 text-white w-full lg:w-auto">
+                                        Dropping Point - Bogura
+                                    </button>
+
+                                    <button
+                                        class="btn bg-slate-400 text-white w-full lg:w-auto">
+                                        Est. Time - 11 Hour
+                                    </button>
+                                </div>
+
+                            </div>
+
+                            <!-- <div
+                                class="space-y-8 flex flex-col mt-10 bg-slate-200  px-4 py-4 rounded-md">
+                                <div class="flex lg:flex-row flex-col justify-between">
+                                    <h4>
+                                        Route
+                                    </h4>
+                                    <h2 class="font-bold">
+                                        Dhaka - Sylhet
+                                    </h2>
+                                </div>
+
+                                <div class="flex lg:flex-row flex-col justify-between">
+                                    <h4>
+                                        Departure Time
+                                    </h4>
+                                    <h2 class="font-bold">
+                                        9:00 PM
+                                    </h2>
+                                </div>
+                                <div class="flex lg:flex-row flex-col lg:justify-around items-center ">
+                                    <button
+                                        class="btn btn-active bg-slate-400 text-white">
+                                        Boarding Point - Laxmipur
+                                    </button>
+                                    <button
+                                        class="btn btn-active bg-slate-400 text-white">
+                                        Dropping Point - Bogura2
+                                    </button>
+                                    <button
+                                        class="btn btn-active bg-slate-400 text-white">
+                                        Est. Time - 11 Hour
+                                    </button>
+                                </div>
+                            </div> -->
+                            <!-- end -->
+                        </div>
+                        <!-- ticket price -->
+                        <div
+                            class="ticket-price lg:col-span-2 flex flex-col justify-center items-center">
+                            <img src="images/fare.png" alt>
+                            <h3>550taka</h3>
+                            <p>per seat</p>
+                        </div>
+
+                    </div>
+                </section>
+                <!-- end -->
+
+                <!-- ticket for seat booking part -->
+                <section class="mt-10">
+                    <!-- start -->
+                    <div class="grid lg:grid-cols-12 grid-cols-1 gap-4">
+                        <!-- selected seat of bus A1,A2,B1,B2.... start -->
+                        <div class="lg:col-span-10 text-black font-medium">
+                            <h1>Select your seat</h1>
+
+                            <div class="flex justify-between">
+                                <p class="flex items-center"><img
+                                        src="images/seat-gray.png"
+                                        alt>Available</p>
+                                <button class="flex text-green-500"><img src="images/seat-green-filled.png"
+                                        alt>Selected</button>
+                            </div>
+
+                            <div class="grid grid-cols-1 gap-2 mt-4">
+
+                                <!-- Row Driver -->
+                                <div
+                                    class="grid grid-cols-6 gap-3 items-center">
+                                    <div></div>
+
+                                    <button></button>
+                                    <button></button>
+
+                                    <div></div>
+
+                                    <button></button>
+                                    <button
+                                        class="btn btn-active bg-slate-500"><i
+                                            class="fa-regular fa-life-ring text-2xl"></i></button>
+                                </div>
+                                <!-- Row A -->
+                                <div
+                                    class="grid grid-cols-6 gap-3 items-center">
+                                    <div
+                                        class="btn btn-sm bg-slate-200">A</div>
+
+                                    <button
+                                        class="seat-btn btn btn-outline bg-slate-300">A1</button>
+                                    <button
+                                        class="seat-btn btn btn-outline bg-slate-300">A2</button>
+
+                                    <div></div>
+
+                                    <button
+                                        class="seat-btn btn btn-outline bg-slate-300">A3</button>
+                                    <button
+                                        class="seat-btn btn btn-outline bg-slate-300">A4</button>
+                                </div>
+
+                                <!-- Row B -->
+                                <div
+                                    class="grid grid-cols-6 gap-3 items-center">
+                                    <div class="btn btn-sm bg-slate-200">B</div>
+
+                                    <button
+                                        class="seat-btn btn btn-outline bg-slate-300">B1</button>
+                                    <button
+                                        class="seat-btn btn btn-outline bg-slate-300">B2</button>
+
+                                    <div></div>
+
+                                    <button
+                                        class="seat-btn btn btn-outline bg-slate-300">B3</button>
+                                    <button
+                                        class="seat-btn btn btn-outline bg-slate-300">B4</button>
+                                </div>
+
+                                <!-- Row C -->
+                                <div
+                                    class="grid grid-cols-6 gap-3 items-center">
+                                    <div class="btn btn-sm bg-slate-200">C</div>
+
+                                    <button
+                                        class="seat-btn btn btn-outline bg-slate-300">C1</button>
+                                    <button
+                                        class="seat-btn btn btn-outline bg-slate-300">C2</button>
+
+                                    <div></div>
+
+                                    <button
+                                        class="seat-btn btn btn-outline bg-slate-300">C3</button>
+                                    <button
+                                        class="seat-btn btn btn-outline bg-slate-300">C4</button>
+                                </div>
+                                <!-- Row D -->
+                                <div
+                                    class="grid grid-cols-6 gap-3 items-center">
+                                    <div class="btn btn-sm bg-slate-200">D</div>
+
+                                    <button
+                                        class="seat-btn btn btn-outline bg-slate-300">D1</button>
+                                    <button
+                                        class="seat-btn btn btn-outline bg-slate-300">D2</button>
+
+                                    <div></div>
+
+                                    <button
+                                        class="seat-btn btn btn-outline bg-slate-300">D3</button>
+                                    <button
+                                        class="seat-btn btn btn-outline bg-slate-300">D4</button>
+                                </div>
+                                <!-- Row E -->
+                                <div
+                                    class="grid grid-cols-6 gap-3 items-center">
+                                    <div class="btn btn-sm bg-slate-200">E</div>
+
+                                    <button
+                                        class="seat-btn btn btn-outline bg-slate-300">E1</button>
+                                    <button
+                                        class="seat-btn btn btn-outline bg-slate-300">E2</button>
+
+                                    <div></div>
+
+                                    <button
+                                        class="seat-btn btn btn-outline bg-slate-300">E3</button>
+                                    <button
+                                        class="seat-btn btn btn-outline bg-slate-300">E4</button>
+                                </div>
+                                <!-- Row F -->
+                                <div
+                                    class="grid grid-cols-6 gap-3 items-center">
+                                    <div class="btn btn-sm bg-slate-200">F</div>
+
+                                    <button
+                                        class="seat-btn btn btn-outline bg-slate-300">F1</button>
+                                    <button
+                                        class="seat-btn btn btn-outline bg-slate-300">F2</button>
+
+                                    <div></div>
+
+                                    <button
+                                        class="seat-btn btn btn-outline bg-slate-300">F3</button>
+                                    <button
+                                        class="seat-btn btn btn-outline bg-slate-300">F4</button>
+                                </div>
+                                <!-- Row G -->
+                                <div
+                                    class="grid grid-cols-6 gap-3 items-center">
+                                    <div class="btn btn-sm bg-slate-200">G</div>
+
+                                    <button
+                                        class="seat-btn btn btn-outline bg-slate-300">G1</button>
+                                    <button
+                                        class="seat-btn btn btn-outline bg-slate-300">G2</button>
+
+                                    <div></div>
+
+                                    <button
+                                        class="seat-btn btn btn-outline bg-slate-300">G3</button>
+                                    <button
+                                        class="seat-btn btn btn-outline bg-slate-300">G4</button>
+                                </div>
+                                <!-- Row H -->
+                                <div
+                                    class="grid grid-cols-6 gap-3 items-center">
+                                    <div class="btn btn-sm bg-slate-200">H</div>
+
+                                    <button
+                                        class="seat-btn btn btn-outline bg-slate-300">H1</button>
+                                    <button
+                                        class="seat-btn btn btn-outline bg-slate-300">H2</button>
+
+                                    <div></div>
+
+                                    <button
+                                        class="seat-btn btn btn-outline bg-slate-300">H3</button>
+                                    <button
+                                        class="seat-btn btn btn-outline bg-slate-300">H4</button>
+                                </div>
+                                <!-- Row I -->
+                                <div
+                                    class="grid grid-cols-6 gap-3 items-center">
+                                    <div class="btn btn-sm bg-slate-200">I</div>
+
+                                    <button
+                                        class="seat-btn btn btn-outline bg-slate-300">I1</button>
+                                    <button
+                                        class="seat-btn btn btn-outline bg-slate-300">I2</button>
+
+                                    <div></div>
+
+                                    <button
+                                        class="seat-btn btn btn-outline bg-slate-300">I3</button>
+                                    <button
+                                        class="seat-btn btn btn-outline bg-slate-300">I4</button>
+                                </div>
+                                <!-- Row J -->
+                                <div
+                                    class="grid grid-cols-6 gap-3 items-center">
+                                    <div class="btn btn-sm bg-slate-200">J</div>
+
+                                    <button
+                                        class="seat-btn btn btn-outline bg-slate-300">J1</button>
+                                    <button
+                                        class="seat-btn btn btn-outline bg-slate-300">J2</button>
+
+                                    <div></div>
+
+                                    <button
+                                        class="seat-btn btn btn-outline bg-slate-300">J3</button>
+                                    <button
+                                        class="seat-btn btn btn-outline bg-slate-300">J4</button>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!--selected seat of bus.. end -->
+
+                        <!-- price and coupon code and contact part start -->
+                        <div class="lg:col-span-2">
+
+                            <h1>Select Your Seat</h1>
+                            <!-- selected seat & price list -->
+                            <div>
+                                <table class="table">
+                                    <!-- head -->
+                                    <thead>
+                                        <tr>
+                                            <th>Seat <span>o</span></th>
+                                            <th>Class</th>
+                                            <th>Price</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="seat-table-body">
+                                        
+                                    </tbody>
+                                    
+                                </table>
+                            </div>
+                            <p>Total Price : <span id="total-price-seat">0</span></p>
+                            <!-- coupon apply -->
+                            <div>
+                                <div class="flex mt-3">
+                                    <input id="text-input" type="text"
+                                        placeholder="Have any coupon?"
+                                        class="input input-ghost w-[250px]" />
+                                    <button onclick="applyCoupon()" id="coupon-btn" disabled="disabled"
+                                        class=" btn btn-actice bg-[#1DD100] ml-2">Apply</button>
+                                    <p id="messages" class=" text-sm font-light ml-2"></p>
+                                    
+                                </div>
+                                <!-- Grand-Price after added coupon -->
+                                <div
+                                    class="flex justify-between w-[370px] lg:w-[220px] mt-4 ml-2">
+                                    <h2>Grand Total :</h2>
+                                    <p id="grand-price">0</p>
+                                </div>
+                                <!-- information contact -->
+                                <div class="mt-5">
+                                    <fieldset
+                                        class="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4">
+                                        <legend
+                                            class="fieldset-legend">Next</legend>
+
+                                        <label class="input validator">
+                                            <svg class="h-[1em] opacity-50"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 24 24">
+                                                <g
+                                                    stroke-linejoin="round"
+                                                    stroke-linecap="round"
+                                                    stroke-width="2.5"
+                                                    fill="none"
+                                                    stroke="currentColor">
+                                                    <path
+                                                        d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+                                                    <circle cx="12" cy="7"
+                                                        r="4"></circle>
+                                                </g>
+                                            </svg>
+                                            <input
+                                                type="text"
+                                                required
+                                                placeholder="Username"
+                                                pattern="[A-Za-z][A-Za-z0-9\-]*"
+                                                minlength="3"
+                                                maxlength="30"
+                                                title="Only letters, numbers or dash" />
+                                        </label>
+                                        <label class="input validator">
+                                            <svg class="h-[1em] opacity-50"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 16 16">
+                                                <g fill="none">
+                                                    <path
+                                                        d="M7.25 11.5C6.83579 11.5 6.5 11.8358 6.5 12.25C6.5 12.6642 6.83579 13 7.25 13H8.75C9.16421 13 9.5 12.6642 9.5 12.25C9.5 11.8358 9.16421 11.5 8.75 11.5H7.25Z"
+                                                        fill="currentColor"></path>
+                                                    <path
+                                                        fill-rule="evenodd"
+                                                        clip-rule="evenodd"
+                                                        d="M6 1C4.61929 1 3.5 2.11929 3.5 3.5V12.5C3.5 13.8807 4.61929 15 6 15H10C11.3807 15 12.5 13.8807 12.5 12.5V3.5C12.5 2.11929 11.3807 1 10 1H6ZM10 2.5H9.5V3C9.5 3.27614 9.27614 3.5 9 3.5H7C6.72386 3.5 6.5 3.27614 6.5 3V2.5H6C5.44771 2.5 5 2.94772 5 3.5V12.5C5 13.0523 5.44772 13.5 6 13.5H10C10.5523 13.5 11 13.0523 11 12.5V3.5C11 2.94772 10.5523 2.5 10 2.5Z"
+                                                        fill="currentColor"></path>
+                                                </g>
+                                            </svg>
+                                            <input
+                                                type="tel"
+                                                class="tabular-nums"
+                                                required
+                                                placeholder="Phone"
+                                                pattern="[0-9]*"
+                                                minlength="10"
+                                                maxlength="10"
+                                                title="Must be 11 digits" />
+                                        </label>
+                                        <label class="input validator">
+                                            <svg class="h-[1em] opacity-50"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 24 24">
+                                                <g
+                                                    stroke-linejoin="round"
+                                                    stroke-linecap="round"
+                                                    stroke-width="2.5"
+                                                    fill="none"
+                                                    stroke="currentColor">
+                                                    <rect width="20" height="16"
+                                                        x="2" y="4"
+                                                        rx="2"></rect>
+                                                    <path
+                                                        d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                                                </g>
+                                            </svg>
+                                            <input type="email"
+                                                placeholder="mail@site.com"
+                                                required />
+                                        </label>
+
+                                        <button
+                                            class="btn mt-4 bg-[#1DD100]">Next</button>
+                                    </fieldset>
+
+                                </div>
+                                <div class="mt-2">
+                                    <p class="text-center"><a href="#" class="link link-primary">Terms and Conditions</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end -->
+                </section>
+                <!-- end -->
+            </section>
         </main>
 
         <footer>
