@@ -9,6 +9,8 @@ const totalPrice = document.getElementById('total-price-seat');
 const grandPrice = document.getElementById('grand-price');
 const totalSeat = document.getElementById('total-seat');
 const inputPhone = document.getElementById('input-phone');
+const inputName = document.getElementById('input-name');
+const inputEmail = document.getElementById('input-email');
 const nextBtn = document.getElementById('next-btn');
 
 let selectedSeats = [];
@@ -30,15 +32,17 @@ function checkNextButton() {
     else {
         nextBtn.disabled = true;
     }
-    phone.value.remove('');
 }
-nextBtn.addEventListener('click', function(){
+nextBtn.addEventListener('click', function () {
     // clear input value
     inputPhone.value = '';
+    inputName.value = '';
+    inputEmail.value = '';
     // again disable next button
     nextBtn.disabled = true;
 })
 inputPhone.addEventListener('input', checkNextButton);
+
 // click seat button
 for (let i = 0; i < seats.length; i++) {
     seats[i].onclick = function () {
@@ -94,15 +98,21 @@ function applyCoupon() {
     const inputText = document.getElementById('text-input');
     const message = document.getElementById('messages');
 
-    const couponCode = inputText.value.trim().toUpperCase();
+    const couponCode = inputText.value.trim();
     const total = parseInt(totalPrice.innerText);
     grandPrice.innerText = total;
     let discount = 0;
     if (couponCode === 'NEW24') {
         discount = total * 0.15; //15% discount
+        message.innerText = 'Applied ✅';
+        message.classList.remove('text-red-500');
+        message.classList.add('text-green-500');
     }
-    else if (couponCode === 'COUPLE40') {
+    else if (couponCode === 'Couple40') {
         discount = total * 0.20; //20% discount
+        message.innerText = 'Applied ✅';
+        message.classList.remove('text-red-500');
+        message.classList.add('text-green-500');
     }
     else {
         message.innerText = "Didn't match, try again ❌";
@@ -111,9 +121,6 @@ function applyCoupon() {
     }
     const grandTotal = total - discount;
     grandPrice.innerText = grandTotal;
-
-    message.innerText = 'Applied ✅';
-    message.classList.add('text-green-500');
     isCouponApplied = true;
     couponBtn.disabled = true;
     console.log('Discount', discount);
