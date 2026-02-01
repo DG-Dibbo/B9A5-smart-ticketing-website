@@ -107,15 +107,17 @@ function applyCoupon() {
         message.innerText = 'Applied ✅';
         message.classList.remove('text-red-500');
         message.classList.add('text-green-500');
+        inputText.value = '';
     }
     else if (couponCode === 'Couple40') {
         discount = total * 0.20; //20% discount
         message.innerText = 'Applied ✅';
         message.classList.remove('text-red-500');
         message.classList.add('text-green-500');
+        inputText.value = '';
     }
     else {
-        message.innerText = "Didn't match, try again ❌";
+        message.innerText = `Didn't match.❎`;
         message.classList.add('text-red-500');
         return;
     }
